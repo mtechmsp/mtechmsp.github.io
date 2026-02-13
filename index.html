@@ -76,10 +76,17 @@
       margin-top: -2px;
     }
     .nav{
-      display:flex; align-items:center; gap: 14px;
-      flex-wrap: wrap;
-      justify-content: flex-end;
-    }
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  width:100%;
+}
+
+.nav-left{
+  display:flex;
+  gap:14px;
+}
+
     .chip{
   border: 1px solid rgba(232,106,86,.4);
   background: rgba(255,255,255,.95);
@@ -268,11 +275,20 @@
       </div>
 
       <div class="nav">
-        <a class="chip" href="#services">Services</a>
-        <a class="chip" href="#support">Support</a>
-        <a class="chip" href="#contact">Contact</a>
-        <a class="chip support-icon" href="https://mtechmsp.screenconnect.com/" target="_blank" rel="noopener" title="Remote Support">🖥️ Remote Support</a>
-      </div>
+  <div class="nav-left">
+    <a class="chip" href="#services">Services</a>
+    <a class="chip" href="#support">Support</a>
+    <a class="chip" href="#contact">Contact</a>
+  </div>
+
+  <a class="chip support-icon" 
+     href="https://mtechmsp.screenconnect.com/" 
+     target="_blank" 
+     rel="noopener" 
+     title="Remote Support">
+     🖥️ Remote Support
+  </a>
+</div>
     </div>
 
     <div class="hero">
