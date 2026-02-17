@@ -1,1 +1,237 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MTech MSP | Support Portal</title>
+  <meta name="description" content="Open a new support ticket or check the status of an existing request." />
+  <meta name="theme-color" content="#E86A56" />
 
+  <style>
+    :root{
+      --brand: #E86A56;
+      --ink: #312F30;
+      --muted: #6b7280;
+      --line: #e5e7eb;
+      --soft: #fff3f0;
+      --shadow: 0 10px 30px rgba(0,0,0,.08);
+      --radius: 18px;
+    }
+    *{ box-sizing:border-box; }
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at 15% 25%, rgba(232,106,86,.35), transparent 45%),
+        radial-gradient(circle at 85% 0%, rgba(232,106,86,.25), transparent 55%),
+        linear-gradient(180deg, #fff5f1 0%, #ffffff 70%);
+    }
+    a{ color: inherit; text-decoration:none; }
+    .wrap{ max-width:1100px; margin:0 auto; padding:22px; }
+
+    /* Header matches your site */
+    .top{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:14px;
+      padding:6px 0;
+    }
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      background:transparent;
+      padding:0;
+      line-height:0;
+    }
+    .brand img{ height:96px; width:auto; display:block; }
+
+    .nav{
+      display:flex;
+      align-items:center;
+      gap:14px;
+      flex-wrap:wrap;
+      justify-content:flex-end;
+    }
+    .chip{
+      border: 1px solid rgba(232,106,86,.45);
+      background: rgba(255,255,255,.95);
+      padding: 10px 18px;
+      border-radius: 999px;
+      font-size: 14px;
+      font-weight: 600;
+      letter-spacing: .2px;
+      transition: all .2s ease;
+      box-shadow: 0 6px 16px rgba(0,0,0,.06);
+    }
+    .chip:hover{
+      background: rgba(232,106,86,.15);
+      border-color: var(--brand);
+      transform: translateY(-3px);
+      box-shadow: 0 10px 22px rgba(0,0,0,.1);
+    }
+    .support-icon{
+      background: linear-gradient(135deg, var(--brand), #ff7a65);
+      color:#fff;
+      border:none;
+      font-weight:700;
+      box-shadow: 0 8px 22px rgba(232,106,86,.35);
+    }
+    .support-icon:hover{
+      transform: translateY(-4px);
+      box-shadow: 0 14px 30px rgba(232,106,86,.45);
+    }
+
+    /* Page content */
+    .panel{
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.78);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      overflow:hidden;
+    }
+    .hero{ padding: 22px; margin-top: 10px; }
+    h1{ margin:0 0 8px; font-size: 28px; letter-spacing:-.4px; }
+    .sub{ margin:0; color: var(--muted); line-height:1.55; }
+
+    .actions{
+      display:flex;
+      gap:12px;
+      flex-wrap:wrap;
+      margin-top:14px;
+    }
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:10px;
+      padding: 12px 14px;
+      border-radius: 12px;
+      border: 1px solid var(--line);
+      background:#fff;
+      font-weight:750;
+      font-size:14px;
+    }
+    .btnPrimary{
+      background: var(--brand);
+      border-color: rgba(0,0,0,.05);
+      color:#fff;
+    }
+    .btnPrimary:hover{ filter: brightness(.97); }
+
+    /* Embed area */
+    .embedWrap{
+      margin-top:14px;
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      overflow:hidden;
+      background:#fff;
+      position: relative;
+    }
+    iframe{
+      width:100%;
+      height: 1050px;
+      border:0;
+      display:block;
+      background:#fff;
+    }
+
+    /* Fallback message if iframe is blocked */
+    .fallback{
+      display:none;
+      padding: 18px;
+      border-top: 1px solid var(--line);
+      background: rgba(255,255,255,.95);
+    }
+    .fallback p{ margin:0 0 10px; color: var(--muted); }
+    .note{ font-size: 13px; color: var(--muted); margin-top: 10px; }
+
+    footer{
+      margin: 18px 0 6px;
+      color: var(--muted);
+      font-size: 13px;
+      display:flex;
+      align-items:center;
+      justify-content: space-between;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    @media (max-width: 700px){
+      .brand img{ height: 74px; }
+      iframe{ height: 1200px; }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <div class="top">
+      <div class="brand">
+        <a href="/"><img src="Mtech_gear_logo1-removebg.png" alt="MTech MSP logo" /></a>
+      </div>
+
+      <div class="nav">
+        <a class="chip" href="/#services">Services</a>
+        <a class="chip" href="/#support">Support</a>
+        <a class="chip" href="/#contact">Contact</a>
+        <a class="chip support-icon" href="https://mtechmsp.screenconnect.com/" target="_blank" rel="noopener">🖥 Remote Support</a>
+      </div>
+    </div>
+
+    <div class="panel hero">
+      <h1>Support Portal</h1>
+      <p class="sub">
+        Start a new service ticket or check the status of an existing request.
+      </p>
+
+      <div class="actions">
+        <a class="btn btnPrimary" href="https://mtechmsp.syncromsp.com/check_ins" target="_blank" rel="noopener">Open Ticket Portal</a>
+        <a class="btn" href="mailto:support@mtechmsp.com?subject=Support%20Request%20-%20MTech%20MSP">Email Support</a>
+        <a class="btn" href="tel:+17189086529">Call 718-908-6529</a>
+      </div>
+
+      <div class="embedWrap">
+        <iframe id="syncroFrame" src="https://mtechmsp.syncromsp.com/check_ins"></iframe>
+
+        <div class="fallback" id="fallback">
+          <p>
+            Your browser blocked the embedded portal. No worries — click below to open it directly:
+          </p>
+          <a class="btn btnPrimary" href="https://mtechmsp.syncromsp.com/check_ins" target="_blank" rel="noopener">Open Ticket Portal</a>
+          <div class="note">Tip: If you prefer, you can also email support@mtechmsp.com with screenshots and the best callback number.</div>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <span>© <span id="y"></span> MTech MSP. All rights reserved.</span>
+      <span>US-based MSP providing remote IT support</span>
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+
+    // If the iframe is blocked by security headers, show the fallback after a short delay.
+    setTimeout(() => {
+      const fb = document.getElementById("fallback");
+      try {
+        const frame = document.getElementById("syncroFrame");
+        // If blocked, some browsers keep it blank or throw on access;
+        // fallback gives users a clean path either way.
+        if (!frame || !frame.contentWindow) {
+          fb.style.display = "block";
+        } else {
+          // We can't reliably inspect cross-origin content; show fallback if frame seems blank.
+          fb.style.display = "block";
+        }
+      } catch (e) {
+        fb.style.display = "block";
+      }
+    }, 1200);
+  </script>
+</body>
+</html>
