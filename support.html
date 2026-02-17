@@ -17,6 +17,23 @@
       --shadow: 0 10px 30px rgba(0,0,0,.08);
       --radius: 18px;
     }
+    
+    .syncroFrame{
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  overflow: hidden;           /* IMPORTANT: crops content */
+  background: #fff;
+  box-shadow: 0 10px 30px rgba(0,0,0,.08);
+
+  height: 760px;              /* adjust if needed */
+}
+
+.syncroFrame iframe{
+  width: 100%;
+  height: 920px;              /* taller than wrapper so bottom gets clipped */
+  border: 0;
+  display: block;
+}
     *{ box-sizing:border-box; }
     body{
       margin:0;
@@ -193,8 +210,13 @@
         <a class="btn" href="tel:+17189086529">Call 718-908-6529</a>
       </div>
 
-      <div class="embedWrap">
-        <iframe id="syncroFrame" src="https://mtechmsp.syncromsp.com/check_ins"></iframe>
+     <div class="syncroFrame">
+  <iframe
+    src="https://mtechmsp.syncromsp.com/check_ins"
+    title="Support Ticket Portal"
+    loading="lazy">
+  </iframe>
+</div>
 
         <div class="fallback" id="fallback">
           <p>
