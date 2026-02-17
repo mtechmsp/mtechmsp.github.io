@@ -147,14 +147,7 @@
       background:#fff;
       position: relative;
     }
-    iframe{
-      width:100%;
-      height: 1050px;
-      border:0;
-      display:block;
-      background:#fff;
-    }
-
+    
     /* Fallback message if iframe is blocked */
     .fallback{
       display:none;
@@ -225,8 +218,6 @@
           <a class="btn btnPrimary" href="https://mtechmsp.syncromsp.com/check_ins" target="_blank" rel="noopener">Open Ticket Portal</a>
           <div class="note">Tip: If you prefer, you can also email support@mtechmsp.com with screenshots and the best callback number.</div>
         </div>
-      </div>
-    </div>
 
     <footer>
       <span>© <span id="y"></span> MTech MSP. All rights reserved.</span>
@@ -236,24 +227,6 @@
 
   <script>
     document.getElementById("y").textContent = new Date().getFullYear();
-
-    // If the iframe is blocked by security headers, show the fallback after a short delay.
-    setTimeout(() => {
-      const fb = document.getElementById("fallback");
-      try {
-        const frame = document.getElementById("syncroFrame");
-        // If blocked, some browsers keep it blank or throw on access;
-        // fallback gives users a clean path either way.
-        if (!frame || !frame.contentWindow) {
-          fb.style.display = "block";
-        } else {
-          // We can't reliably inspect cross-origin content; show fallback if frame seems blank.
-          fb.style.display = "block";
-        }
-      } catch (e) {
-        fb.style.display = "block";
-      }
-    }, 1200);
   </script>
 </body>
 </html>
